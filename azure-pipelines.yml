@@ -1,4 +1,10 @@
 # Starter pipeline
+- task: Kubernetes@1
+  inputs:
+    connectionType: 'Kubernetes Service Connection'
+    command: 
+    secretType: 'dockerRegistry'
+    containerRegistryType: 'Azure Container Registry'
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
